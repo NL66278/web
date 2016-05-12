@@ -1,30 +1,13 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-#
-#    OpenERP, Open Source Business Applications
-#    Copyright (C) 2004-2012 OpenERP S.A. (<http://openerp.com>).
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
-
+# © 2013-2015 OpenERP SA (http://odoo.com).
+# © 2016 Therp BV (http://therp.nl).
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
     'name': 'Attachment Size Limit',
     'category': 'Hidden',
-    'version' : '1.0',
-    'author' : 'OpenERP SA',
-    'sequence': 120,
+    'version': '8.0.2.0.0',
+    'license': 'AGPL-3',
+    'author': 'OpenERP SA,Therp BV,Odoo Community Association (OCA)',
     'summary': 'Limits on # file, size on uploads, Block users for uploading',
     'description': """
 Define a size limit for the attachments
@@ -35,14 +18,16 @@ In company configuration you can control these three things:
 * Maximum size of file that can be uploaded.
 * Block User.
 """,
-    'depends': ['web','base','document'],
+    'depends': [
+        'web',
+        'document',
+    ],
     'js': [
         'static/src/js/attachment_size_limit.js',
     ],
     'data': [
-        'res_company_view.xml',
+        'views/res_company_view.xml',
+        'web/resources.xml',
     ],
     'installable': True,
-    'application': True,
-    'auto_install': False,
 }
