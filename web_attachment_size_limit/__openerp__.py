@@ -3,8 +3,8 @@
 # © 2016 Therp BV (http://therp.nl).
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
-    'name': 'Attachment Size Limit',
-    'category': 'Hidden',
+    'name': 'Web Attachment Size Limit',
+    'category': 'Web',
     'version': '8.0.2.0.0',
     'license': 'AGPL-3',
     'author': 'OpenERP SA,Therp BV,Odoo Community Association (OCA)',
@@ -21,9 +21,6 @@ In company configuration you can control these three things:
     'depends': [
         'web',
         'document',
-    ],
-    'js': [
-        'static/src/js/attachment_size_limit.js',
     ],
     'data': [
         'views/res_company_view.xml',
